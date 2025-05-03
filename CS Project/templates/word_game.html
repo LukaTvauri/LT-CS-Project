@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='game.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>Spin &amp; Guess!</h2>
+    <p><strong>Definition:</strong> {{ definition }}</p>
+    <div class="container">
+      <canvas id="wheel"></canvas>
+      <div class="arrow"></div>
+    </div>
+    <p id="display">{{ masked }}</p>
+    <p id="points">{{ points }}</p>
+    <p id="used">Used letters: –</p>
+    <div class="input-row">
+      <input id="letter" maxlength="1" placeholder="letter" autocomplete="off">
+      <button id="guess-letter-btn" disabled>Guess</button>
+    </div>
+    <div class="input-row">
+      <input id="whole" placeholder="full word (1 try)" autocomplete="off">
+      <button id="guess-word-btn" disabled>Guess Word</button>
+    </div>
+    <p id="result" class="big"></p>
+    <a href="{{ url_for('dashboard') }}">Back</a>
+  </div>
+  <script src="{{ url_for('static', filename='game.js') }}" defer></script>
+</body>
+</html>

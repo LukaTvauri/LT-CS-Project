@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Difficulty</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrapper" style="max-width:25em">
+    <h2 style="margin-bottom:30px">Select Difficulty</h2>
+    <div class="input-row" style="margin:15px">
+      <a href="{{ url_for('word_game', level='easy') }}">
+        <input type="button" class="actionbutton" value="Easy">
+      </a>
+    </div>
+    <div class="input-row" style="margin:15px">
+      <a href="{{ url_for('word_game', level='medium') }}">
+        <input type="button" class="actionbutton" value="Medium">
+      </a>
+    </div>
+    <div class="input-row" style="margin:15px">
+      <a href="{{ url_for('word_game', level='hard') }}">
+        <input type="button" class="actionbutton" value="Hard">
+      </a>
+    </div>
+    <a href="{{ url_for('dashboard') }}">Back</a>
+  </div>
+</body>
+</html>

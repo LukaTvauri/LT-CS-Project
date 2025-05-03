@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <center style="margin-bottom:150px">
+    <a href="{{ url_for('login') }}">
+      <input type="button" class="loginbutton" value="Login" style="padding:15px 35px;font-size:20px">
+    </a>
+  </center>
+  <center style="margin-left:-127px">
+    <a href="{{ url_for('register') }}">
+      <input type="button" class="registerbutton" value="Register" style="padding:15px 35px;font-size:20px">
+    </a>
+  </center>
+</body>
+</html>
